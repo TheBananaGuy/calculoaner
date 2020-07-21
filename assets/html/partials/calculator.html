@@ -1,0 +1,60 @@
+<div class="row justify-content-center">
+
+    <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4 order-first order-md-last">
+        <div class="w-100 h-100 d-flex align-items-center">
+            <div class="jumbotron w-100 text-center text-md-left mt-4">
+                <h3 class="text-uppercase text-center mb-4">Loan calculator</h3>
+                <p class="result">Down payment: <b class="d-block d-md-inline-block"><span
+                            class="js-result result--downPayment"></span> &euro;</b></p>
+                <p class="result">Monthly payment: <b class="d-block d-md-inline-block"><span
+                            class="js-result result--calculated"></span> &euro;</b></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4 order-last order-md-first">
+        <form class="form my-4">
+
+            <div class="form-group">
+                <label for="amount">Loan amount</label>
+                <div class="input-group">
+                    <input id="amount" name="amount" type="number" class="js-input-calculate form-control" min="1"
+                        value="1000" step="1" required />
+                    <div class="input-group-append">
+                        <div class="input-group-text">&euro;</div>
+                    </div>
+                </div>
+                <span id="feedback--amount" class="feedback text-right invalid-feedback d-block"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="percentage">Down payment</label>
+                <div class="input-group">
+                    <input id="percentage" name="percentage" type="number" class="js-input-calculate form-control"
+                        min="0" max="100" step="1" value="2" required />
+                    <div class="input-group-append">
+                        <div class="input-group-text">%</div>
+                    </div>
+                </div>
+                <div id="feedback--percentage" class="feedback text-right invalid-feedback d-block"></div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="time">Loan term (years)</label>
+                <input id="time" name="time" class="js-input-calculate custom-range" type="range" min="1" max="6"
+                    step="1" value="5" />
+                <div class="px-1 d-flex justify-content-between">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</div>
